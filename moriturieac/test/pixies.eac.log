@@ -1,0 +1,93 @@
+Exact Audio Copy V0.99 prebeta 4 from 23. January 2008
+
+EAC extraction logfile from 31. May 2009, 16:46
+
+Pixies / Planet of Sound
+
+Used drive  : MATSHITADVD/CDRW UJDA775  Adapter: 1  ID: 0
+
+Read mode               : Secure
+Utilize accurate stream : Yes
+Defeat audio cache      : Yes
+Make use of C2 pointers : No
+
+Read offset correction                      : 102
+Overread into Lead-In and Lead-Out          : No
+Fill up missing offset samples with silence : Yes
+Delete leading and trailing silent blocks   : No
+Null samples used in CRC calculations       : Yes
+Used interface                              : Installed external ASPI interface
+Gap handling                                : Appended to previous track
+
+Used output format              : User Defined Encoder
+Selected bitrate                : 128 kBit/s
+Quality                         : High
+Add ID3 tag                     : No
+Command line compressor         : C:\Program Files\Exact Audio Copy\Flac\flac.exe
+Additional command line options : -V -8 -T "artist=%a" -T "title=%t" -T "album=%g" -T "date=%y" -T "tracknumber=%n" -T "genre=%m" %s
+
+
+TOC of the extracted CD
+
+     Track |   Start  |  Length  | Start sector | End sector 
+    ---------------------------------------------------------
+        1  |  0:00.12 |  2:09.45 |        12    |     9731   
+        2  |  2:09.57 |  1:47.45 |      9732    |    17801   
+        3  |  3:57.27 |  1:42.30 |     17802    |    25481   
+        4  |  5:39.57 |  2:38.25 |     25482    |    37356   
+
+
+Track  1
+
+     Filename D:\eac\Pixies - Planet of Sound\01. Pixies - Planet of Sound.wav
+
+     Pre-gap length  0:00:02.12
+
+     Peak level 62.2 %
+     Test CRC 14D38CE0
+     Copy CRC 14D38CE0
+     Accurately ripped (confidence 7)  [CA121FB9]
+     Copy OK
+
+Track  2
+
+     Filename D:\eac\Pixies - Planet of Sound\02. Pixies - Theme from Narc.wav
+
+     Pre-gap length  0:00:01.70
+
+     Peak level 62.5 %
+     Test CRC 4493EA28
+     Copy CRC 4493EA28
+     Accurately ripped (confidence 8)  [D05B2CE9]
+     Copy OK
+
+Track  3
+
+     Filename D:\eac\Pixies - Planet of Sound\03. Pixies - Build High.wav
+
+     Pre-gap length  0:00:00.72
+
+     Peak level 52.6 %
+     Test CRC 157099ED
+     Copy CRC 157099ED
+     Accurately ripped (confidence 8)  [83507B5E]
+     Copy OK
+
+Track  4
+
+     Filename D:\eac\Pixies - Planet of Sound\04. Pixies - Evil Hearted You.wav
+
+     Pre-gap length  0:00:00.70
+
+     Peak level 68.3 %
+     Test CRC 7462C71B
+     Copy CRC 7462C71B
+     Accurately ripped (confidence 8)  [39B9C184]
+     Copy OK
+
+
+All tracks accurately ripped
+
+No errors occurred
+
+End of status report
