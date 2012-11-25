@@ -12,4 +12,5 @@ setup(
   entry_points="""
   [morituri.logger]
   eac0.99 = moriturieac.logger.eac099:EACLogger
+  whatcd = moriturieac.logger.whatcd:WhatCDLogger
   """)
