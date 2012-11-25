@@ -1,3 +1,5 @@
+# -*- Mode: Python; test-case-name: moriturieac.test.test_common_result -*-
+
 import os
 import unittest
 

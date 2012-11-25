@@ -1,9 +1,12 @@
+# -*- Mode: Python; test-case-name: moriturieac.test.test_common_result -*-
+
 import os
 import time
 
 from morituri.common import common
+from morituri.result import result
 
-class EACLogger(object):
+class EACLogger(result.Logger):
 
     def __init__(self, frompath=os.getcwd(), topath='D:\eac'):
         self._frompath = frompath
