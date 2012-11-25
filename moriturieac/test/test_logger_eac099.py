@@ -1,4 +1,4 @@
-# -*- Mode: Python; test-case-name: moriturieac.test.test_common_result -*-
+# -*- Mode: Python; test-case-name: moriturieac.test.test_logger_eac099 -*-
 
 import os
 import unittest

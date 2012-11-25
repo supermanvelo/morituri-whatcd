@@ -8,8 +8,8 @@ setup(
   version="0.0",
   description="""morituri EAC-style logger""",
   author="superveloman",
-  packages=['moriturieac', 'moriturieac.common'],
+  packages=['moriturieac', 'moriturieac.logger', 'moriturieac.test'],
   entry_points="""
   [morituri.logger]
-  eac = moriturieac.common.result:EACLogger
+  eac0.99 = moriturieac.logger.eac099:EACLogger
   """)
