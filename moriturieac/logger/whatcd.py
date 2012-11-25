@@ -182,6 +182,12 @@ class WhatCDLogger(result.Logger):
         if trackResult.quality and trackResult.quality > 0.001:
             lines.append('     Track quality %.1f %%' % (
                 trackResult.quality * 100.0, ))
+        if trackResult.testspeed:
+            lines.append('     Extraction Speed (Test) %.4f X' % (
+                trackResult.testspeed))
+        if trackResult.copyspeed:
+            lines.append('     Extraction Speed (Copy) %.4f X' % (
+                trackResult.copyspeed))
         if trackResult.testcrc is not None:
             lines.append('     Test CRC %08X' % trackResult.testcrc)
         if trackResult.copycrc is not None:
