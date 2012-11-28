@@ -132,13 +132,18 @@ class WhatCDLogger(result.Logger):
         lines.append("")
 
         ### per-track
+        duration = 0.0
         for t in ripResult.tracks:
             lines.extend(self.trackLog(t))
             lines.append('')
+            duration += t.testduration + t.copyduration
 
         ### global overview
         # FIXME
 
+        lines.append("")
+        lines.append("Wall clock time to rip all tracks: %.3f minutes" % (
+            duration / 60.0))
         lines.append("")
         lines.append("All tracks accurately ripped")
         lines.append("")
