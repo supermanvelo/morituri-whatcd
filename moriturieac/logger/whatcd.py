@@ -97,12 +97,16 @@ class WhatCDLogger(result.Logger):
         lines.append("Gap handling                                : "
             "Appended to previous track")
         lines.append("")
-        lines.append("Used output format              : User Defined Encoder")
-        lines.append("Selected bitrate                : 128 kBit/s")
-        lines.append("Quality                         : High")
-        lines.append("Add ID3 tag                     : No")
-        lines.append("Command line compressor         : C:\\Program Files\\Exact Audio Copy\\Flac\\flac.exe")
-        lines.append('Additional command line options : -V -8 -T "artist=%a" -T "title=%t" -T "album=%g" -T "date=%y" -T "tracknumber=%n" -T "genre=%m" %s')
+        lines.append("Used output format              : %s" %
+            ripResult.profileName)
+        lines.append("GStreamer pipeline              : %s" %
+            ripResult.profilePipeline)
+        lines.append("GStreamer version               : %s" %
+            ripResult.gstreamerVersion)
+        lines.append("GStreamer Python version        : %s" %
+            ripResult.gstPythonVersion)
+        lines.append("Encoder plugin version          : %s" %
+            ripResult.encoderVersion)
         lines.append("")
         lines.append("")
 
