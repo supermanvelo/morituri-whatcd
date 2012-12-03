@@ -10,6 +10,10 @@ from morituri.result import result
 
 class WhatCDLogger(result.Logger):
 
+    _accuratelyRipped = 0
+    _inARDatabase = 0
+    _errors = False
+
     def _framesToMSF(self, frames):
         # format specifically for EAC log; examples:
         # 5:39.57
@@ -149,9 +153,24 @@ class WhatCDLogger(result.Logger):
         lines.append("Wall clock time to rip all tracks: %.3f minutes" % (
             duration / 60.0))
         lines.append("")
-        lines.append("All tracks accurately ripped")
+        if self._inARDatabase == 0:
+            lines.append("None of the tracks are present "
+                         "in the AccurateRip database")
+        else:
+            if self._accuratelyRipped < len(ripResult.tracks):
+                lines.append("%d track(s) accurately ripped" %
+                    self._accuratelyRipped)
+                lines.append("")
+                lines.append("Some tracks could not be verified as accurate")
+                self._errors = True
+            else:
+                lines.append("All tracks accurately ripped")
+
         lines.append("")
-        lines.append("No errors occurred")
+        if self._errors:
+            lines.append("There were errors")
+        else:
+            lines.append("No errors occurred")
         lines.append("")
         lines.append("End of status report")
         lines.append("")
@@ -203,9 +222,11 @@ class WhatCDLogger(result.Logger):
             lines.append('     Copy CRC %08X' % trackResult.copycrc)
         
         if trackResult.accurip:
+            self._inARDatabase += 1
             if trackResult.ARCRC == trackResult.ARDBCRC:
                 lines.append('     Accurately ripped (confidence %d)  [%08X]' % (
                     trackResult.ARDBConfidence, trackResult.ARCRC))
+                self._accuratelyRipped += 1
             else:
                 lines.append('     Cannot be verified as accurate  '
                     '(confidence %d),  [%08X], AccurateRip returned [%08x]' % (
