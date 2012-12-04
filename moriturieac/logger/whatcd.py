@@ -76,11 +76,16 @@ class WhatCDLogger(result.Logger):
                 ripResult.vendor, ripResult.model, ripResult.release))
         lines.append("")
 
-        # Default for cdparanoia
+        # Default for cdparanoia; every sector gets read at least twice
+        lines.append("Read mode                : Secure")
         lines.append("Use cdparanoia mode      : Yes (cdparanoia %s)" % (
             ripResult.cdparanoiaVersion))
-        # Default for cdparanoia by virtue of ripping whole tracks at a time
-        lines.append("Defeat audio cache       : Yes")
+        defeat = 'Unknown'
+        if ripResult.cdparanoiaDefeatsCache is True:
+            defeat = 'Yes'
+        if ripResult.cdparanoiaDefeatsCache is False:
+            defeat = 'No'
+        lines.append("Defeat audio cache       : %s" % defeat)
         # Default for cdparanoia by virtue of having no C2 rip mode
         lines.append("Make use of C2 pointers  : No")
 
