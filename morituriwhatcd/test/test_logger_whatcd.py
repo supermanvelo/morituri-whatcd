@@ -1,4 +1,4 @@
-# -*- Mode: Python; test-case-name: moriturieac.test.test_logger_eac099 -*-
+# -*- Mode: Python; test-case-name: moriturieac.test.test_logger_whatcd -*-
 
 import os
 import unittest
@@ -6,13 +6,13 @@ import unittest
 from morituri.image import toc
 from morituri.result import result
 
-from moriturieac.common import result as cresult
+from morituriwhatcd.logger import whatcd
 
 from morituri.test import common
 
 class PixiesTestCase(unittest.TestCase):
     def setUp(self):
-        self.logger = cresult.EACLogger(frompath=u'/tmp')
+        self.logger = whatcd.WhatCDLogger()
         self.result = result.RipResult()
         self.result.artist = 'Pixies'
         self.result.title = 'Planet of Sound'
@@ -59,7 +59,7 @@ class PixiesTestCase(unittest.TestCase):
         
     def testLog(self):
         result = self.logger.log(self.result, epoch=1243781200)
-        path = os.path.join(os.path.dirname(__file__), 'pixies.eac.log')
+        path = os.path.join(os.path.dirname(__file__), 'pixies.whatcd.log')
         expected = open(path).read()
         common.diffStrings(result, expected)
 
