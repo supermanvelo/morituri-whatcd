@@ -2,7 +2,7 @@
 
  - python setup.py bdist_egg
  - mkdir -p $HOME/.morituri/plugins
- - cp dist/morituri_eac*egg $HOME/.morituri/plugins
+ - cp dist/morituri_*egg $HOME/.morituri/plugins
 
 === Using while developing uninstalled ===
 
