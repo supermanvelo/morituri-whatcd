@@ -162,7 +162,10 @@ class WhatCDLogger(result.Logger):
             lines.append("None of the tracks are present "
                          "in the AccurateRip database")
         else:
-            if self._accuratelyRipped < len(ripResult.tracks):
+            nonHTOA = len(ripResult.tracks)
+            if ripResult.tracks[0].number == 0:
+                nonHTOA -= 1
+            if self._accuratelyRipped < nonHTOA:
                 lines.append("%d track(s) accurately ripped" %
                     self._accuratelyRipped)
                 lines.append("")
