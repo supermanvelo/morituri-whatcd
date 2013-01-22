@@ -21,6 +21,16 @@ class PixiesTestCase(unittest.TestCase):
         self.result.vendor = 'MATSHITA'
         self.result.model = 'DVD/CDRW UJDA775'
 
+        self.result.cdparanoiaVersion = 'III 10.2'
+        self.result.cdparanoiaDefeatsCache = True
+        self.result.cdrdaoVersion = '1.2.3'
+
+        self.result.profileName = 'flac'
+        self.result.profilePipeline = 'flacenc name=tagger quality=8'
+        self.result.gstreamerVersion = '0.10.36'
+        self.result.gstPythonVersion = '0.10.22'
+        self.result.encoderVersion = '0.10.31'
+
         tocfile = toc.TocFile(os.path.join(os.path.dirname(__file__),
             u'pixies.toc'))
         tocfile.parse()
@@ -53,6 +63,9 @@ class PixiesTestCase(unittest.TestCase):
         track.accurip = True
         track.ARCRC = track.ARDBCRC = arcrc
         track.ARDBConfidence = arc
+
+        track.testspeed = 6.4747
+        track.copyspeed = 8.3741
 
         return track
 

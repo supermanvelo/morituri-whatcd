@@ -7,8 +7,8 @@ Pixies / Planet of Sound
 Used drive  : MATSHITADVD/CDRW UJDA775 None
 
 Read mode                : Secure
-Use cdparanoia mode      : Yes (cdparanoia None)
-Defeat audio cache       : Unknown
+Use cdparanoia mode      : Yes (cdparanoia III 10.2)
+Defeat audio cache       : Yes
 Make use of C2 pointers  : No
 
 Read offset correction                      : 102
@@ -16,14 +16,14 @@ Overread into Lead-In and Lead-Out          : No
 Fill up missing offset samples with silence : Yes
 Delete leading and trailing silent blocks   : No
 Null samples used in CRC calculations       : Yes
-Gap Detection                               : cdrdao version None
+Gap Detection                               : cdrdao version 1.2.3
 Gap handling                                : Appended to previous track
 
-Used output format              : None
-GStreamer pipeline              : None
-GStreamer version               : None
-GStreamer Python version        : None
-Encoder plugin version          : None
+Used output format              : flac
+GStreamer pipeline              : flacenc name=tagger quality=8
+GStreamer version               : 0.10.36
+GStreamer Python version        : 0.10.22
+Encoder plugin version          : 0.10.31
 
 
 TOC of the extracted CD
@@ -43,6 +43,8 @@ Track  1
      Pre-gap length  0:00:02.12
 
      Peak level 62.2 %
+     Extraction Speed (Test) 6.4747 X
+     Extraction Speed (Copy) 8.3741 X
      Test CRC 14D38CE0
      Copy CRC 14D38CE0
      Accurately ripped (confidence 7)  [CA121FB9]
@@ -55,6 +57,8 @@ Track  2
      Pre-gap length  0:00:01.70
 
      Peak level 62.5 %
+     Extraction Speed (Test) 6.4747 X
+     Extraction Speed (Copy) 8.3741 X
      Test CRC 4493EA28
      Copy CRC 4493EA28
      Accurately ripped (confidence 8)  [D05B2CE9]
@@ -67,6 +71,8 @@ Track  3
      Pre-gap length  0:00:00.72
 
      Peak level 52.6 %
+     Extraction Speed (Test) 6.4747 X
+     Extraction Speed (Copy) 8.3741 X
      Test CRC 157099ED
      Copy CRC 157099ED
      Accurately ripped (confidence 8)  [83507B5E]
@@ -79,6 +85,8 @@ Track  4
      Pre-gap length  0:00:00.70
 
      Peak level 68.3 %
+     Extraction Speed (Test) 6.4747 X
+     Extraction Speed (Copy) 8.3741 X
      Test CRC 7462C71B
      Copy CRC 7462C71B
      Accurately ripped (confidence 8)  [39B9C184]
