@@ -1,4 +1,4 @@
-# -*- Mode: Python; test-case-name: moriturieac.test.test_logger_whatcd -*-
+# -*- Mode: Python; test-case-name: morituriwhatcd.test.test_logger_whatcd -*-
 
 import os
 import time
