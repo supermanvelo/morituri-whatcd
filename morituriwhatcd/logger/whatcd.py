@@ -44,7 +44,7 @@ class WhatCDLogger(result.Logger):
 
     def log(self, ripResult, epoch=time.time()):
         lines = self.logRip(ripResult, epoch=epoch)
-        return '\r\n'.join(lines)
+        return '\n'.join(lines)
 
 
     def logRip(self, ripResult, epoch):
