@@ -4,13 +4,12 @@
 from setuptools import setup, find_packages
 
 setup(
-  name="morituri-eac",
-  version="0.0",
-  description="""morituri EAC-style logger""",
+  name="morituri-whatcd",
+  version="0.2.0",
+  description="""morituri what.cd-style logger""",
   author="superveloman",
-  packages=['moriturieac', 'moriturieac.logger', 'moriturieac.test'],
+  packages=['morituriwhatcd', 'morituriwhatcd.logger', 'morituriwhatcd.test'],
   entry_points="""
   [morituri.logger]
-  eac0.99 = moriturieac.logger.eac099:EACLogger
-  whatcd = moriturieac.logger.whatcd:WhatCDLogger
+  whatcd = morituriwhatcd.logger.whatcd:WhatCDLogger
   """)
